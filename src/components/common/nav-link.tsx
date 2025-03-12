@@ -1,15 +1,26 @@
-import Link from "next/link"
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const NavLink = ({
-    href,
-    children,
-    className,
+  href,
+  children,
+  className,
 }: {
-    href: string,
-    children: React.ReactNode,
-    className?: string
+  href: string;
+  children: React.ReactNode;
+  className?: string;
 }) => {
-  return <Link href={href} className="transition-colors text-sm duration-200 text-gray-600 hover:text-rose-500">{children}</Link>
-}
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "transition-colors text-sm duration-200 text-gray-600 hover:text-rose-500",
+        className
+      )}
+    >
+      {children}
+    </Link>
+  );
+};
 
-export default NavLink
+export default NavLink;
