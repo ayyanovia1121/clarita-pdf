@@ -47,7 +47,8 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-:root {
+@layer base{
+  :root {
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(222.2, 84%, 4.9%);
   --card: hsl(0, 0%, 100%);
@@ -119,6 +120,7 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
+}
 @layer base {
   * {
     @apply border-border;
